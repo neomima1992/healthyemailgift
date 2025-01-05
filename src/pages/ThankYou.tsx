@@ -9,9 +9,12 @@ const ThankYou = () => {
             className="w-32 h-auto mb-8"
           />
 
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            תודה שנרשמתם!
+          </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              תודה שנרשמתם!
+            המדריך החינמי שלנו לארוחות בריאות ומהירות בדרך אליכם למייל.
           </p>
 
           <img
@@ -31,6 +34,14 @@ const ThankYou = () => {
               className="bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary-dark transition-all"
             >
               חזרה לעמוד הראשי
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-secondary text-white font-bold py-3 px-6 rounded-md hover:bg-secondary-dark transition-all"
+            >
+              הצטרפו לקהילת הפייסבוק
             </a>
           </div>
         </div>
