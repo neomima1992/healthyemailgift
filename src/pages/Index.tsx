@@ -1,4 +1,3 @@
-import { EmailSignupForm } from "@/components/EmailSignupForm";
 import { FeaturePoints } from "@/components/FeaturePoints";
 
 const Index = () => {
@@ -30,9 +29,48 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="w-full max-w-md mb-12">
-            <EmailSignupForm />
-          </div>
+          <form 
+            action="https://formsubmit.co/danielsneomi@gmail.com" 
+            method="POST" 
+            className="flex flex-col gap-4 items-center w-full max-w-md mb-12 bg-white p-6 rounded-lg shadow-md"
+          >
+            {/* Hidden Fields for Configuration */}
+            <input type="hidden" name="_subject" value="New Guide Request" />
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            {/* Form Fields */}
+            <label className="w-full text-right font-medium" htmlFor="name">
+              שם מלא:
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="הכניסו את שמכם המלא"
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-primary"
+            />
+
+            <label className="w-full text-right font-medium" htmlFor="email">
+              כתובת מייל:
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="הכניסו את כתובת המייל שלכם"
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-primary"
+            />
+
+            <button 
+              type="submit" 
+              className="w-full bg-primary text-white font-bold py-3 rounded-md hover:bg-primary-dark transition-all"
+            >
+              קבלו את המדריך החינמי
+            </button>
+          </form>
 
           <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
             <h2 className="text-2xl font-semibold mb-6 text-right">
