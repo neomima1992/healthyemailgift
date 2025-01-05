@@ -14,8 +14,8 @@ export const EmailSignupForm = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    toast.success("Success! Check your email for the guide.", {
-      description: "We've sent your free healthy meals guide!"
+    toast.success("בהצלחה! בדקו את תיבת הדואר שלכם.", {
+      description: "שלחנו לכם את המדריך לארוחות בריאות!"
     });
     
     setEmail('');
@@ -23,21 +23,21 @@ export const EmailSignupForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-2">
+    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-2" dir="rtl">
       <Input
         type="email"
-        placeholder="Enter your email address"
+        placeholder="הכניסו את כתובת המייל שלכם"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="h-12 text-lg"
+        className="h-12 text-lg text-right"
       />
       <Button 
         type="submit" 
         className="w-full h-12 text-lg font-semibold bg-primary hover:bg-primary/90"
         disabled={isLoading}
       >
-        {isLoading ? "Sending..." : "Get Your Free Guide"}
+        {isLoading ? "שולח..." : "קבלו את המדריך החינמי"}
       </Button>
     </form>
   );
