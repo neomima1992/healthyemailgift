@@ -36,7 +36,7 @@ const Index = () => {
           >
             {/* Hidden Fields for Configuration */}
             <input type="hidden" name="_subject" value="New Guide Request" />
-            <input type="hidden" name="_next" value="/thank-you" />
+            <input type="hidden" name="_next" value="https://neomihomeo.netlify.app/thank-you" />
             <input type="hidden" name="_captcha" value="false" />
 
             {/* Form Fields */}
